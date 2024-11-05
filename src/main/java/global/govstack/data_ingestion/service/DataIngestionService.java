@@ -24,9 +24,9 @@ public class DataIngestionService {
     public ResponseEntity<String> emitMessage(DemoDto message) {
         try {
             this.kafkaTemplate.send(TOPIC, PARTITION, message.key(), mapper.writeValueAsString(message.threat()));
-            return ResponseEntity.ok("Message processed from ICPAC");
+            return ResponseEntity.ok("Publishing message to the topic");
         } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Something went wrong with message publishing " + e);
         }
     }
 }
