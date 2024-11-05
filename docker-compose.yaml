@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  backend:
+    container_name: ingestion-service
+    build:
+      context: .
+    ports:
+      - '8083:8083'
+    networks:
+      - shared_network
+networks:
+  shared_network:
+    external: true

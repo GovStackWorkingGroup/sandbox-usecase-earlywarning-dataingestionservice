@@ -23,7 +23,6 @@ public class DataIngestionService {
 
     public ResponseEntity<String> emitMessage(DemoDto message) {
         try {
-            //Should be set up to work with JSON, but this is just a demo of Kafka setup.
             this.kafkaTemplate.send(TOPIC, PARTITION, message.key(), mapper.writeValueAsString(message.threat()));
             return ResponseEntity.ok("Message processed from ICPAC");
         } catch (JsonProcessingException e) {
