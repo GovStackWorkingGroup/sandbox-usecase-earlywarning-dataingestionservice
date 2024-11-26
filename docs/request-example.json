@@ -1,0 +1,12 @@
+{
+  "key": "poc",
+  "threat": {
+    "threatType": "LIGHT_RAINFALL",
+    "severity": "MIDDLE",
+    "affectedCountries": ["Kenia"],
+    "affectedCounties": ["Mombasa", "Kwale"],
+    "range": "20-300 mm",
+    "periodStart": "2024-10-20T00:00:00",
+    "periodEnd": "2024-10-27T00:00:00"
+  }
+}
